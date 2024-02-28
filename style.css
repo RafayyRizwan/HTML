@@ -1,0 +1,213 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+         "header header "
+         "nav nav "
+         "main aside"
+         "footer footer"
+    
+    ;
+
+}
+header{
+    background-color: rgb(0, 0, 0,0.9);
+    height: .2em;
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(0, 0, 0,0.9);
+    color: white;
+    justify-content: space-around;
+    display: flex;
+    align-items:center;
+    height: 3.5em;
+    
+    padding-bottom: .5em;
+   
+    
+}
+
+.navbar ul{
+    display: flex;
+    justify-content:right;
+    
+
+}
+
+.navbar ul li{
+    list-style: none;
+    margin: 0em 1.5em;
+    justify-content: center;
+    opacity: 0;
+    animation: appear 1s ease 1s forwards; /* Animation name, duration, timing function, delay */
+    
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    font-size: 1.2em;
+    color: white;
+     
+}
+.navbar h3 {
+        opacity: 0;
+        animation: appear 1s ease 1s forwards; /* Animation name, duration, timing function, delay */
+        color: white;
+        font-size: 2.5em ;
+        margin-right: 5em;
+    }
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    main{
+        grid-area: main;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside{
+        grid-area: aside;
+        display: flex; 
+    }
+    .sidebar{
+        width:20%;
+        height: 100vh;
+        top: 3.65em;
+        flex-shrink: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        flex-direction: column;
+        
+        color: black;
+
+        
+    }
+
+    .social-icons {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .social-icons li {
+        margin-bottom: 20px;
+    }
+    
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+
+    footer{
+        grid-area: footer;
+    }
+
+    .first{
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5em;   
+       
+     }
+
+    .first-left{
+        
+        width: 70%;
+        height: 50%;
+        text-align: left;
+        justify-content: center;
+        margin-top: 5em;
+        margin-left: 3.5em;
+        
+        opacity: 0;
+        font-size: 2em;
+        animation: appear 2s ease 2s forwards; /* Animation name, duration, timing function, delay */
+    
+    }
+
+    .first-left div{
+        
+        text-align: left;
+        justify-content: center;
+        display: block;
+        margin: auto;
+        margin-left: 0em;
+        animation: appear 2s ease 2s forwards;
+        font-weight: 500;
+        color: rgb(116, 116, 116);
+        word-wrap: break-word;
+    }
+    .first-left .name{
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+        
+        text-align: left;
+    }
+
+    .first-right {
+        width: 50%;
+        margin: 0px 0px 0px 50px;
+    }
+    .first-right img{
+        width: 80%;
+        height: 50%;
+        align-items: center;
+        margin:  5em 40px ; ;
+    }
+
+    .second{
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Adjust as needed */
+    }
+
+    .second h3{
+        align-self: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: .5em;
+        margin-top: 1em;
+    }
+    .second p{
+        align-self: flex-end;
+    }
+
+    footer{
+        color: white;
+        background-color:black;
+        clear: both;
+    }
+
+   
+
