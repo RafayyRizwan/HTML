@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+
+    background-color: rgb(184, 183, 181);
+    color: black;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgb(121, 121, 121);
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 20px;
+    
+
+}
+.navbar li{
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    align-items: center;
+    color: black;
+    width: 33%;
+    text-align: center;
+
+}
+.navbar a:hover{
+    color: rgb(82, 82, 82);
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
+h1:hover{
+    color: rgb(226, 226, 226);
+}
+p{
+    text-align: center;
+    padding: 20px;
+
+}
+p:hover{
+    color: rgb(226, 226, 226);
+}
+
+ul {
+    text-align: center;
+    padding: 20px;
+    list-style: none;
+}
+section{
+    background-color:aliceblue;
+    display: flex;
+    align-items: center;
+    
+}
+ section div{
+    width: 33%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+ }
+  .center{
+    
+    text-align: center;
+    background-color: rgb(89, 103, 116);
+    transition: width 2s;
+    
+ }
+ .center h1{
+    text-align: center;
+    transition:  5s;
+    background-color: zrgb(184, 207, 212);
+    color: white;
+ }
+ .center h1:hover {
+    
+    background-color: rgb(255, 255, 255);
+    color: black;
+    
+  }

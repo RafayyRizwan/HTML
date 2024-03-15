@@ -1,0 +1,57 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer"
+    ;
+    background-color: aqua;
+
+}
+
+nav {
+    display: block;
+    background-color: yellow;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+}
+
+#clicked .on {
+    display: block;
+}
+
+#clicked .off {
+    display: none;
+}
+
+#clicked:target .on {
+    display: none;
+}
+
+#clicked:target .off {
+    display: block;
+}
+
+#clicked{
+    background-color: greenyellow;
+}
+
+#clicked:target{
+    background-color: rgb(255, 0, 0);
+}
+nav{
+    display: none;
+}
+
+
+#clicked:target nav{
+    display: block;
+}
+

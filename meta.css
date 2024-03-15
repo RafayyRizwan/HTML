@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header "
+        "nav nav "
+        "main aside"
+        "footer footer"
+
+    ;
+
+}
+
+
+main {
+    grid-area: main;
+    background: linear-gradient(to right, #265073 0%,#2D9596 100%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    margin: 3em 0em;
+
+}
+
+.first-left {
+
+    width: 70%;
+    height: 50%;
+    text-align: left;
+    justify-content: center;
+    margin-top: 5em;
+    margin-left: 3.5em;
+
+    opacity: 0;
+    font-size: 2em;
+    animation: appear 1s ease 1s forwards;
+    /* Animation name, duration, timing function, delay */
+
+}
+
+.first-left div {
+
+    text-align: left;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-left: 0em;
+    animation: appear 1s ease 10s forwards;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+}
+
+.first-left .name {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+
+    text-align: left;
+}
+
+.first-right {
+    width: 50%;
+    margin: 0px 0px 0px 50px;
+}
+
+.first-right img {
+    width: 80%;
+    height: 50%;
+    align-items: center;
+    margin: 5em 40px;
+    ;
+}
+
+.second {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.second h1{
+    font-size: 1.5rem;
+}
+
+.second .box{
+    background-color: rgb(0, 0, 0);
+    width: 80vw;
+    height: 2px;
+    margin: 3em 0em;
+    display: flex;
+
+}
+
+.second .vertical{
+    height: 93px;
+    width: 2px;
+    background-color: black;
+    margin: 0 7.5em;
+
+}
+
+.vertical-title{
+    position: relative;
+    top: 3em;
+    right: 1.5em;
+    width: 150px;
+
+}
+.vertical-desc{
+    position: relative;
+    top: 3em;
+    right: 1.5em;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    width: 100px;
+
+
+
+}
+
+.image-top{
+    width: 70px;
+    position: relative;
+    top: -60px;
+    left: -29px;
+}
+
+.text-grey{
+    color: grey;
+}
+
+main hr {
+    border: 0;
+    background-color: rgb(77, 77, 73);
+    height: 0.2em;
+    display: block;
+    margin: 1em 6.2em;
+    width: 80%;
+
+
+}
+

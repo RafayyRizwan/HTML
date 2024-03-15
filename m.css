@@ -1,0 +1,126 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer"
+    ;
+    
+
+}
+header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    grid-area: header;
+    padding: 1em;
+    height: 20vh;
+}
+
+
+nav{
+    display: block;
+    background-color: yellow;
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+   
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.navbar ul li  {
+    list-style: none;
+   
+    padding: 15px;
+    
+   
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul li a:hover {
+    font-size: 1.2em;
+    color: rgb(148, 148, 148);
+
+}
+.showNav {
+    height: 1.5em;
+    width: 1.25em;
+    display: block;
+    margin: 1em;
+    border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    border-radius: 0.1em ;
+    z-index: 1;
+}
+form{z-index: -1;}
+
+.showNav::before {
+    content: '';
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.5em;
+    border-top: 0.2em solid #ffffff;
+}
+
+#clicked .on {
+    display: block;
+}
+
+#clicked .off {
+    display: none;
+}
+
+#clicked:target .on {
+    display: none;
+}
+
+#clicked:target .off {
+    display: block;
+}
+
+
+
+
+ nav{
+    display: none;
+}
+
+#clicked:target nav{
+    display: flex;
+    
+}
+
+.screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }

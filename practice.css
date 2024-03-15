@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header {
+    background-color: rgb(0, 0, 0, 0.9);
+    height: 3em;
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 1em;
+}
+
+.navbar h3 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+main {
+    grid-area: main;
+    background: linear-gradient(to right, #636363 0%, #e0e0e0 100%);
+    color: black;
+}
+
+aside {
+    display: none;
+}
+
+.first-left {
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+.first-right img {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.second {
+    max-width: 100%;
+}
+
+.second .box {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.second .vertical {
+    display: none;
+}
+
+.vertical-title, .vertical-desc {
+    display: none;
+}
+
+.image-top {
+    display: none;
+}
+
+text-grey {
+    color: grey;
+}
+
+main hr {
+    margin: 1em auto;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    clear: both;
+}
+
+@media (min-width: 700px) {
+    body {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    
+    aside {
+        display: flex;
+        grid-area: aside;
+        height: 100vh;
+        background: linear-gradient(to right, #e0e0e0 0%,#636363 100%);
+    }
+
+    .sidebar {
+        width: 20%;
+        flex-shrink: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        flex-direction: column;
+        z-index: -1;
+        color: black;
+    }
+
+    .social-icons {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-icons li {
+        margin-bottom: 20px;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5em;
+        margin: 3em 0em;
+    }
+
+    .first-left {
+        width: 70%;
+        height: 50%;
+        text-align: left;
+        justify-content: center;
+        margin-top: 5em;
+        margin-left: 3.5em;
+        opacity: 0;
+        font-size: 2em;
+        animation: appear 2s ease 2s forwards;
+    }
+
+    .first-left div {
+        text-align: left;
+        justify-content: center;
+        display: block;
+        margin: auto;
+        margin-left: 0em;
+        animation: appear 2s ease 2s forwards;
+        font-weight: 500;
+        color: rgb(116, 116, 116);
+        word-wrap: break-word;
+    }
+
+    .first-left .name {
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+        text-align: left;
+    }
+
+    .first-right {
+        width: 50%;
+        margin: 0px 0px 0px 50px;
+    }
+
+    .first-right img {
+        width: 80%;
+        height: 50%;
+        align-items: center;
+        margin: 5em 40px;
+    }
+
+    .second h1 {
+        font-size: 1.5rem;
+    }
+
+    .second .box {
+        background-color: rgb(0, 0, 0);
+        width: 80vw;
+        height: 2px;
+        margin: 3em 0em;
+        display: flex;
+    }
+
+    .second .vertical {
+        height: 93px;
+        width: 2px;
+        background-color: black;
+        margin: 0 7.5em;
+    }
+
+    .vertical-title {
+        position: relative;
+        top: 3em;
+        right: 1.5em;
+        width: 150px;
+    }
+
+    .vertical-desc {
+        position: relative;
+        top: 3em;
+        right: 1.5em;
+        color: rgb(122, 122, 122);
+        font-size: 1em;
+        width: 100px;
+    }
+
+    .image-top {
+        width: 70px;
+        position: relative;
+        top: -60px;
+        left: -29px;
+    }
+
+    .text-grey {
+        color: grey;
+    }
+
+    main hr {
+        border: 0;
+        background-color: rgb(77, 77, 73);
+        height: 0.2em;
+        display: block;
+        margin: 1em 6.2em;
+        width: 80%;
+    }
+
+    footer {
+        grid-area: footer;
+        z-index: 1;
+    }
+}

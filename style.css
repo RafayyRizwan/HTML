@@ -1,213 +1,350 @@
-*{
+* {
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
-    color: white;
+
+body {
+
+    color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: auto;
-    grid-template-areas: 
-         "header header "
-         "nav nav "
-         "main aside"
-         "footer footer"
-    
+    grid-template-areas:
+        "header header "
+        "nav nav "
+        "main aside"
+        "footer footer"
+
     ;
 
 }
-header{
-    background-color: rgb(0, 0, 0,0.9);
-    height: .2em;
-    grid-area: header;
-}
 
-nav{
+
+    header {
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        grid-area: header;
+        padding: 1em;
+        height: 20vh;
+    }
+
+
+nav {
     grid-area: nav;
-    background-color: rgb(0, 0, 0,0.9);
-    color: white;
+    background-color: #ECF4D6;
+    color: black;
     justify-content: space-around;
     display: flex;
-    align-items:center;
+    align-items: center;
     height: 3.5em;
-    
+
     padding-bottom: .5em;
-   
-    
+
+
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
-    justify-content:right;
-    
+    justify-content: right;
+
 
 }
 
-.navbar ul li{
+.navbar ul li {
     list-style: none;
     margin: 0em 1.5em;
     justify-content: center;
     opacity: 0;
-    animation: appear 1s ease 1s forwards; /* Animation name, duration, timing function, delay */
-    
+    animation: appear 1s ease 1s forwards;
+    /* Animation name, duration, timing function, delay */
+
 }
 
-.navbar ul li a{
+.navbar ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     font-size: 1.2em;
-    color: white;
-     
+    color: rgb(148, 148, 148);
+
 }
+
 .navbar h3 {
+    opacity: 0;
+    animation: appear 1s ease 1s forwards;
+    /* Animation name, duration, timing function, delay */
+    color: black;
+    font-size: 2.5em;
+    margin-right: 5em;
+}
+
+@keyframes appear {
+    from {
         opacity: 0;
-        animation: appear 1s ease 1s forwards; /* Animation name, duration, timing function, delay */
-        color: white;
-        font-size: 2.5em ;
-        margin-right: 5em;
-    }
-    @keyframes appear {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
     }
 
-    main{
-        grid-area: main;
-        background-color: white;
-        color: black;
-        display: flex;
-        flex-direction: column;
+    to {
+        opacity: 1;
     }
+}
 
-    aside{
-        grid-area: aside;
-        display: flex; 
-    }
-    .sidebar{
-        width:20%;
-        height: 100vh;
-        top: 3.65em;
-        flex-shrink: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        flex-direction: column;
-        
-        color: black;
+main {
+    grid-area: main;
+    background: linear-gradient(to right, #265073 0%,#2D9596 100%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
 
-        
-    }
+aside {
+    grid-area: aside;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to right, #2D9596 0%,#F8EDFF 100%);
+}
 
-    .social-icons {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+.sidebar {
     
-    .social-icons li {
-        margin-bottom: 20px;
-    }
+    width: 20%;
     
-    .social-icons img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
+    
+    flex-shrink: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    z-index: -1;
+    color: black;
+
+
+}
+
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    margin-bottom: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+footer {
+    grid-area: footer;
+    z-index: 1;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    margin: 3em 0em;
+
+}
+
+.first-left {
+
+    width: 70%;
+    height: 50%;
+    text-align: left;
+    justify-content: center;
+    margin-top: 5em;
+    margin-left: 3.5em;
+
+    opacity: 0;
+    font-size: 2em;
+    animation: appear 1s ease 1s forwards;
+    /* Animation name, duration, timing function, delay */
+
+}
+
+.first-left div {
+
+    text-align: left;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    margin-left: 0em;
+    animation: appear 1s ease 10s forwards;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    word-wrap: break-word;
+}
+
+.first-left .name {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+
+    text-align: left;
+}
+
+.first-right {
+    width: 50%;
+    margin: 0px 0px 0px 50px;
+}
+
+.first-right img {
+    width: 80%;
+    height: 50%;
+    align-items: center;
+    margin: 5em 40px;
+    ;
+}
+
+.second {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.second h1{
+    font-size: 1.5rem;
+}
+
+.second .box{
+    background-color: rgb(0, 0, 0);
+    width: 80vw;
+    height: 2px;
+    margin: 3em 0em;
+    display: flex;
+
+}
+
+.second .vertical{
+    height: 93px;
+    width: 2px;
+    background-color: black;
+    margin: 0 7.5em;
+
+}
+
+.vertical-title{
+    position: relative;
+    top: 3em;
+    right: 1.5em;
+    width: 150px;
+
+}
+.vertical-desc{
+    position: relative;
+    top: 3em;
+    right: 1.5em;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    width: 100px;
+
+
+
+}
+
+.image-top{
+    width: 70px;
+    position: relative;
+    top: -60px;
+    left: -29px;
+}
+
+.text-grey{
+    color: grey;
+}
+
+main hr {
+    border: 0;
+    background-color: rgb(77, 77, 73);
+    height: 0.2em;
+    display: block;
+    margin: 1em 6.2em;
+    width: 80%;
+
+
+}
+
+footer {
+    color: white;
+    background-color: black;
+    clear: both;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* CSS rules for screens with a minimum width of 768 pixels */
     
 
-    footer{
-        grid-area: footer;
-    }
 
-    .first{
-        display: flex;
-        justify-content: space-around;
-        gap: 1.5em;   
-       
-     }
 
-    .first-left{
-        
-        width: 70%;
-        height: 50%;
-        text-align: left;
-        justify-content: center;
-        margin-top: 5em;
-        margin-left: 3.5em;
-        
-        opacity: 0;
-        font-size: 2em;
-        animation: appear 2s ease 2s forwards; /* Animation name, duration, timing function, delay */
-    
-    }
-
-    .first-left div{
-        
-        text-align: left;
-        justify-content: center;
-        display: block;
-        margin: auto;
-        margin-left: 0em;
-        animation: appear 2s ease 2s forwards;
-        font-weight: 500;
-        color: rgb(116, 116, 116);
-        word-wrap: break-word;
-    }
-    .first-left .name{
-        font-size: 1em;
-        font-weight: bold;
-        color: black;
-        
-        text-align: left;
-    }
-
-    .first-right {
-        width: 50%;
-        margin: 0px 0px 0px 50px;
-    }
-    .first-right img{
-        width: 80%;
-        height: 50%;
-        align-items: center;
-        margin:  5em 40px ; ;
-    }
-
-    .second{
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer"
+        ;
         background-color: aqua;
-        display: flex;
-        flex-direction: column;
-        height: 100vh; /* Adjust as needed */
+    
     }
-
-    .second h3{
-        align-self: flex-start;
-        align-items: center;
-        text-align: center;
-        padding: .5em;
-        margin-top: 1em;
+    
+    nav {
+        display: block;
+        background-color: yellow;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100vh;
     }
-    .second p{
-        align-self: flex-end;
+    
+    #clicked .on {
+        display: block;
     }
-
-    footer{
-        color: white;
-        background-color:black;
-        clear: both;
+    
+    #clicked .off {
+        display: none;
     }
-
-   
+    
+    #clicked:target .on {
+        display: none;
+    }
+    
+    #clicked:target .off {
+        display: block;
+    }
+    
+    #clicked{
+        background-color: greenyellow;
+    }
+    
+    #clicked:target{
+        background-color: rgb(255, 0, 0);
+    }
+    
+     nav{
+        display: none;
+    }
+    
+    #clicked:target nav{
+        display: block;
+    }
+    
+  }
 
